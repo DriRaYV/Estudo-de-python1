@@ -1,8 +1,8 @@
-def retornaPercentualDesconto(fidelidade, copmra, quantCompra):
+def retornaPercentualDeDesconto(fidelidade, compra, quantCompra):
     desconto = 0
     if fidelidade >= 10:
         desconto = 15
-    if copmra >= 1500:
+    if compra >= 1500:
         desconto += 17
     if quantCompra > 5:
         desconto += 13
@@ -15,4 +15,5 @@ def calculaCompra(valorCompra, valorDesconto):
     return calculaValor
 
 
-print(calculaCompra(1000, retornaPercentualDesconto(11, 1600, 6)))
+print("O valor da compra com desconto foi de: " +
+      calculaCompra(1000, retornaPercentualDeDesconto(11, 1600, 6)))
